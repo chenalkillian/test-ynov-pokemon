@@ -14,9 +14,7 @@ const Pokemon=require('./route/Pokemon.js')
 app.use('/Pokemon',Pokemon)
 
 
-
-app.listen(8000,()=>{
-    console.log('Le serveur est en ligne')
-})
-
-
+const PORT = process.env.PORT || 8000; // 8000 est utilisé pour le développement local
+app.listen(PORT, () => {
+  console.log(`Le serveur est en ligne sur le port ${PORT}`);
+});
